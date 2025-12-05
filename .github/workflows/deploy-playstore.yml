@@ -66,11 +66,6 @@ jobs:
           echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
           echo "storeFile=release.jks" >> android/key.properties
       
-      - name: Bump version code
-        run: |
-          # Auto-increment version using GitHub run number
-          sed -i "s/version: \(.*\)+\(.*\)/version: \1+${{ github.run_number }}/" pubspec.yaml
-      
       - name: Build App Bundle
         run: flutter build appbundle --release
       
