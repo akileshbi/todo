@@ -80,4 +80,4 @@ jobs:
           packageName: com.bi.todo_app # ← UPDATE THIS!
           releaseFiles: build/app/outputs/bundle/release/app-release.aab
           track: internal
-          status: completed
+          status: draft
